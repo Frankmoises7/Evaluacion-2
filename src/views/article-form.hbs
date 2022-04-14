@@ -20,7 +20,9 @@
       <div id="nameuser-help" class="form-text text-danger">Puedes usar tu nombre de pila.</div>
       <br><br>
 
-      {{#if title}} {{title}}
+      {{#if title}} 
+        <label for="title" class="form-label"> Pelicula selecionada: </label><br>
+      {{title}}
       {{else}}
       <label for="title" class="form-label">Selecciona la pelicula que reseñarás: </label><br><br>
       <div class="radio-item">
