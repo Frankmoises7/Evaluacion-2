@@ -15,15 +15,19 @@
   <form action="/articles/{{#if id}}{{id}}/update{{else}}create{{/if}}" method="POST">
     <div class="mb-3">
 
+      
+
+      {{#if title}}
+        <label for="nameuser" class="form-label">Tu Nombre: </label>
+        {{nameuser}} <br><br>
+        <label for="title" class="form-label">Pelicula selecionada: </label><br>
+      {{title}}
+
+      {{else}}
       <label for="nameuser" class="form-label">Tu Nombre: </label>
       <input type="text" name="nameuser" class="form-control" required="" placeholder="Italo Passalacqua">
       <div id="nameuser-help" class="form-text text-danger">Puedes usar tu nombre de pila.</div>
       <br><br>
-
-      {{#if title}} 
-        <label for="title" class="form-label"> Pelicula selecionada: </label><br>
-      {{title}}
-      {{else}}
       <label for="title" class="form-label">Selecciona la pelicula que reseñarás: </label><br><br>
       <div class="radio-item">
         <input type="radio" class="form-check-input" name="title" value="Spiderman No Way Home" required=""> Spider-Man

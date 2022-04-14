@@ -27,7 +27,7 @@ class ArticlesDAO {
   }
 
   async update (article) {
-    const response = await this.db.query('UPDATE articles SET content = ?, nameuser = ? WHERE id = ?', [article.content, article.nameuser, article.id])
+    const response = await this.db.query('UPDATE articles SET content = ? WHERE id = ?', [article.content, article.id])
     const result = response[0]
     return result
   }
