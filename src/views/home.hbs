@@ -1,0 +1,90 @@
+{{> navbar}}
+
+
+<body>
+  <div class="container py-3">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal text-white"> Reseñas de Peliculas </h1>
+      <br><br>
+      <div class="image-home">
+        <img src="/img/review.png" class="img-fluid" alt="review">
+      </div>
+      <br><br>
+      <div>
+        <p class="fs-5 text-white">
+          En esta web podrás dejar tus reseñas más auténticas sin miedo a la censura o no tener libertad de expresión.
+          <br>
+          Siéntete libre de ser el mejor o peor crítico del mundo. <br>
+          Haz click en el botón <b>
+            <font color="red">ROJO</font>
+          </b> de abajo para crear una reseña o Haz click en el botón <b>
+            <font color="grey">GRIS</font>
+          </b> para ver reseñas de otras personas.
+        </p>
+      </div>
+    </div>
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header text-white bg-danger py-3">
+              <h4 class="my-0 fw-strong">Spider-Man No Way Home</h4>
+            </div>
+            <div class="card-body bg-danger">
+              <img class="img-thumbnail" src="/img/spiderman.jpg" alt="Spiderman-NWH-movie">
+              <br><br>
+              <div class="card-text text-white">
+                <p>
+                  Duración: 2 horas 28 minutos <br>
+                  Género: Superhéroes, Acción <br>
+                  Año: 2021 <br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 bg-danger">
+              <h4 class="my-0 fw-strong text-white">Morbius</h4>
+            </div>
+            <div class="card-body bg-danger">
+              <img class="img-thumbnail" src="/img/morbius.jpg" alt="Morbius-movie">
+              <br><br>
+              <div class="card-text text-white">
+                <p>
+                  Duración: 1 hora 4 minutos <br>
+                  Género: Superhéroes, Acción <br>
+                  Año: 2022 <br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 bg-danger">
+              <h4 class="my-0 fw-strong text-white">The Batman</h4>
+            </div>
+            <div class="card-body text-white bg-danger">
+              <img class="img-thumbnail" src="/img/batman.jpg" alt="Batman-movie">
+              <br><br>
+              <div class="card-text">
+                <p>
+                  Duración: 2 horas 56 minutos <br>
+                  Género: Superhéroes, Acción <br>
+                  Año: 2022 <br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+  </div>
+
+  <div class="d-grid gap-3 col-6 mx-auto">
+    <a href="articles/create" class="btn btn-danger" type="button">Crear una nueva reseña</a>
+    <a href="reviews" class="btn btn-secondary" type="button">Leer reseñas</a>
+  </div>
+  <br>
+</body>

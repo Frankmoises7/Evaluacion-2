@@ -1,0 +1,48 @@
+{{> navbar}}
+<div class="container mt-3 text-white">
+  <h1>
+    {{#if id}}
+    Actualizando el artículo "{{title}}"
+    {{else}}
+    Crear una nueva reseña
+    {{/if}}
+  </h1>
+  <br><br>
+  <!--
+    Este formulario se usará tanto para edición como creación, este if nos dice que si viene un id, entonces será un update, si no, será un create.
+    Para el action, si viene un id será un post a /articles/:id/update, si no, será un post a /articles/create.
+  -->
+  <form action="/articles/{{#if id}}{{id}}/update{{else}}create{{/if}}" method="POST">
+    <div class="mb-3">
+
+      <label for="nameuser" class="form-label">Tu Nombre: </label>
+      <input type="text" name="nameuser" class="form-control" required="" placeholder="Italo Passalacqua">
+      <div id="nameuser-help" class="form-text text-danger">Puedes usar tu nombre de pila.</div>
+      <br><br>
+
+      {{#if title}} {{title}}
+      {{else}}
+      <label for="title" class="form-label">Selecciona la pelicula que reseñarás: </label><br><br>
+      <div class="radio-item">
+        <input type="radio" class="form-check-input" name="title" value="Spiderman No Way Home" required=""> Spider-Man
+        No Way Home <br>
+        <input type="radio" class="form-check-input" name="title" value="Morbius" required=""> Morbius <br>
+        <input type="radio" class="form-check-input" name="title" value="The Batman" required=""> The Batman <br>
+      </div>
+      {{/if}}
+
+    </div>
+    <div>
+      <label for="user" class="form-label"> </label>
+    </div>
+    <div class="mb-3">
+      <label for="content" class="form-label">Contenido: </label>
+      <textarea class="form-control" name="content" rows="3" aria-describedby="contentHelp" required=""
+        placeholder="Tu reseña va aquí">{{content}}</textarea>
+      <div id="contentHelp" class="form-text text-danger">¿Que te parecio la pelicula?</div>
+    </div>
+    <div class="mb-3">
+      <button type="submit" class="btn btn-danger">Enviar</button>
+    </div>
+  </form>
+</div>

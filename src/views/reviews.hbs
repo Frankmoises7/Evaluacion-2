@@ -1,0 +1,34 @@
+{{> navbar}}
+
+<body>
+  <div class="container mt-3">
+    {{#if articles}}
+    <h3 class="review-text text-white">Últimas reseñas</h3> <br>
+    {{#each articles}}
+    <div class="card mb-3">
+      <div class="card-body bg-danger">
+        <h5 class="card-title text-white">{{this.title}} || Reseña de: {{this.nameuser}}</h5>
+        <p class="card-review">{{this.content}}</p>
+        <a href="/articles/{{id}}" class="btn btn-secondary" type="button">Ver</a>
+        <a href="/articles/{{id}}/update" class="btn btn-secondary" type="button">Editar</a>
+      </div>
+    </div>
+
+    {{/each}}
+    {{else}}
+    <div class="review-text text-white">
+      <h1>No hay reseñas aun.</h1>
+    </div>
+    <br>
+    <div class="image-home">
+      <img src="/img/review-cry.png" class="img-fluid" alt="review">
+    </div>
+    <br>
+    <div class="d-grid gap-3 col-6 mx-auto">
+      <a href="articles/create" class="btn btn-secondary" type="button">Crear una nueva reseña</a>
+    </div>
+    {{/if}}
+    {{> backhome}}
+  </div>
+</body>
+<br>
