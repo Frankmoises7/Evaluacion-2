@@ -44,6 +44,7 @@ class ArticlesController {
     res.render('article-form')
   }
 
+  //Muestra las reviews en una nueva vista
   async renderReviews (req, res) {
     const articles = await this.articlesDao.getAll()
     res.render('reviews', {
