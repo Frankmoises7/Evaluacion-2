@@ -9,7 +9,7 @@
       <div class="card-body bg-danger">
         <h5 class="card-title text-white">{{this.title}} || Reseña de: {{this.nameuser}}</h5>
         <p class="card-review">{{this.content}}</p>
-        <a href="/articles/{{id}}" class="btn btn-secondary" type="button">Ver</a>
+        <a href="/articles/{{id}}" class="btn btn-info" type="button">Ver</a>
         <a href="/articles/{{id}}/update" class="btn btn-secondary" type="button">Editar</a>
       </div>
     </div>
@@ -28,9 +28,9 @@
     {{/if}}
 
     <div class="d-grid gap-3 col-6 mx-auto">
-      <a href="articles/create" class="btn btn-secondary" type="button">Crear una nueva reseña</a>
+      <a href="articles/create" class="button-grey" type="button">Crear una nueva reseña</a>
     </div>
     {{> backhome}}
   </div>
+
 </body>
-<br>

@@ -2,30 +2,34 @@
 
 <body>
   <div>
-    <div class="image-home">
-      <img src="/img/review.png" class="img-fluid" alt="review">
+    <div class="div-img-home">
+      <div class="img-home">
+        <img src="/img/review.png" class="img-fluid" alt="review">
+      </div>
     </div>
-    <div class="review-text text-white">
-      <h2>Reseña de pelicula "{{title}}"</h2>
-      <h4>Escrito por: {{nameuser}}</h4><br>
-      <div class="container col-6">
-        <div class="card mb-3">
-          <div class="card-body bg-danger">
-            <p class="card-text text-white">{{this.content}}</p>
+
+    <div class="container-review">
+      <div class="review-text text-white">
+        <h2>Reseña de pelicula "{{title}}"</h2>
+        <h4>Escrito por: {{nameuser}}</h4><br>
+
+        <div class="container col-8">
+          <div class="card mb-3">
+            <div class="card-review">
+              <p>{{this.content}}</p>
+            </div>
           </div>
         </div>
-        <br>
-        <br>
       </div>
+
       <div>
         <form action="/articles/{{id}}/delete" method="POST" class="d-grid gap-2 col-6 mx-auto">
-          <a href="/articles/{{id}}/update" class="btn btn-primary" type="button">Editar</a>
-          <button class="btn btn-dark" type="submit">Eliminar</button> <br><br>
+          <a href="/articles/{{id}}/update" class="button-grey" type="button">Editar</a>
+          <button class="button-black" type="submit">Eliminar</button> <br><br>
         </form>
       </div>
       <div class="d-grid gap-2 col-6 mx-auto">
-        <a href="/reviews" class="btn btn-danger" type="button">Leer otras reseñas</a>
+        <a href="/reviews" class="button-red" type="button">Leer otras reseñas</a>
       </div>
     </div>
-    
 </body>

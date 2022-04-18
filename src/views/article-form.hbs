@@ -15,14 +15,11 @@
   <form action="/articles/{{#if id}}{{id}}/update{{else}}create{{/if}}" method="POST">
     <div class="mb-3">
 
-
-
       {{#if title}}
       <label for="nameuser" class="form-label">Tu Nombre: </label> {{nameuser}}
       <br><br>
       <label for="title" class="form-label">Pelicula selecionada: </label><br>
       {{title}}
-
       {{else}}
       <label for="nameuser" class="form-label">Tu Nombre: </label>
       <input type="text" name="nameuser" class="form-control" required="" placeholder="Italo Passalacqua">
@@ -52,3 +49,4 @@
     </div>
   </form>
 </div>
+
